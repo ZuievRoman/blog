@@ -8,6 +8,7 @@
     <body>
         <div class="container">
             <h1>Блог для задания</h1>
+            <a href="admin">Панель Администратора</a>
             <div>
                 <?php foreach($articles as $a): ?>
                 <div class="article">
