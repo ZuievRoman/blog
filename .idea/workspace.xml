@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/articles.php" afterPath="$PROJECT_DIR$/models/articles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/articles.php" afterPath="$PROJECT_DIR$/views/articles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/articles_admin.php" afterPath="$PROJECT_DIR$/views/articles_admin.php" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +30,14 @@
       <file leaf-file-name="articles.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/articles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+            <state relative-caret-position="292">
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
               <folding>
-                <marker date="1483457673531" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
-                <marker date="1483457673531" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
-                <marker date="1483457673531" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
-                <marker date="1483457673531" expanded="true" signature="1572:1632" placeholder="UPDATE artic... " />
-                <marker date="1483457673531" expanded="true" signature="2101:2135" placeholder="DELETE FROM " />
+                <marker date="1483471385689" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
+                <marker date="1483471385689" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
+                <marker date="1483471385689" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
+                <marker date="1483471385689" expanded="true" signature="1571:1631" placeholder="UPDATE artic... " />
+                <marker date="1483471385689" expanded="true" signature="2100:2134" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="articles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/articles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="238">
+              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -56,8 +56,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="493">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/урок 13/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -66,8 +76,8 @@
       <file leaf-file-name="articles_admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/articles_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="425">
+              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -76,7 +86,7 @@
       <file leaf-file-name="articles.php" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/урок 13/models/articles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="1037">
               <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="87" selection-end-column="5" />
               <folding>
                 <marker date="1477426209742" expanded="true" signature="83:122" placeholder="SELECT * FRO... articles" />
@@ -129,16 +139,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htpasswd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/.htpasswd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -162,10 +162,10 @@
         <option value="$PROJECT_DIR$/admin/.htaccess" />
         <option value="$PROJECT_DIR$/css/style.scss" />
         <option value="$PROJECT_DIR$/views/add.html" />
-        <option value="$PROJECT_DIR$/views/articles_admin.php" />
         <option value="$PROJECT_DIR$/views/article_admin.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/views/articles.php" />
+        <option value="$PROJECT_DIR$/views/articles_admin.php" />
         <option value="$PROJECT_DIR$/models/articles.php" />
       </list>
     </option>
@@ -181,10 +181,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="40" />
-    <option name="width" value="947" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="32" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -287,8 +287,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +296,7 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="SearchEverywhereHistoryKey" value="$article&#9;null&#9;null" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/урок 13/models/articles.php" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/урок 13/admin/index.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -349,18 +349,19 @@
       <option name="presentableId" value="Default" />
       <updated>1483354843552</updated>
       <workItem from="1483354844850" duration="22700000" />
-      <workItem from="1483455284492" duration="2384000" />
+      <workItem from="1483455284492" duration="3763000" />
+      <workItem from="1483470268435" duration="1449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25084000" />
+    <option name="totallyTimeSpent" value="27912000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="40" width="947" height="1047" extended-state="0" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22998872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11140725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -400,11 +401,41 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483457673531" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
-            <marker date="1483457673531" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
-            <marker date="1483457673531" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
-            <marker date="1483457673531" expanded="true" signature="1572:1632" placeholder="UPDATE artic... " />
-            <marker date="1483457673531" expanded="true" signature="2101:2135" placeholder="DELETE FROM " />
+            <marker date="1483471385689" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
+            <marker date="1483471385689" expanded="true" signature="1571:1631" placeholder="UPDATE artic... " />
+            <marker date="1483471385689" expanded="true" signature="2100:2134" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1483471385689" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
+            <marker date="1483471385689" expanded="true" signature="1571:1631" placeholder="UPDATE artic... " />
+            <marker date="1483471385689" expanded="true" signature="2100:2134" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -461,7 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -469,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,7 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="56" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,18 +531,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/add.html" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.900/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.900/index.php" />
     <entry file="file://$PROJECT_DIR$/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="56" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -538,14 +557,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/урок 13/views/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/.htaccess">
+    <entry file="file://$USER_HOME$/Desktop/урок 13/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/articles_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/урок 13/models/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <marker date="1477426209742" expanded="true" signature="83:122" placeholder="SELECT * FRO... articles" />
+            <marker date="1477426209742" expanded="true" signature="608:642" placeholder="SELECT * FRO... articles" />
+            <marker date="1477426209742" expanded="true" signature="1163:1232" placeholder="INSERT INTO articles... " />
+            <marker date="1477426209742" expanded="true" signature="2018:2087" placeholder="UPDATE artic... " />
+            <marker date="1477426209742" expanded="true" signature="2751:2785" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/article_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -558,6 +621,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -566,70 +637,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/article_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/урок 13/views/articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/articles_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/урок 13/models/articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <marker date="1477426209742" expanded="true" signature="83:122" placeholder="SELECT * FRO... articles" />
-            <marker date="1477426209742" expanded="true" signature="608:642" placeholder="SELECT * FRO... articles" />
-            <marker date="1477426209742" expanded="true" signature="1163:1232" placeholder="INSERT INTO articles... " />
-            <marker date="1477426209742" expanded="true" signature="2018:2087" placeholder="UPDATE artic... " />
-            <marker date="1477426209742" expanded="true" signature="2751:2785" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="493">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/articles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        <state relative-caret-position="292">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
           <folding>
-            <marker date="1483457673531" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
-            <marker date="1483457673531" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
-            <marker date="1483457673531" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
-            <marker date="1483457673531" expanded="true" signature="1572:1632" placeholder="UPDATE artic... " />
-            <marker date="1483457673531" expanded="true" signature="2101:2135" placeholder="DELETE FROM " />
+            <marker date="1483471385689" expanded="true" signature="65:104" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="495:529" placeholder="SELECT * FRO... articles" />
+            <marker date="1483471385689" expanded="true" signature="957:1031" placeholder="INSERT INTO articles... " />
+            <marker date="1483471385689" expanded="true" signature="1571:1631" placeholder="UPDATE artic... " />
+            <marker date="1483471385689" expanded="true" signature="2100:2134" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>

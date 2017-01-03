@@ -65,7 +65,7 @@ function articles_new($link, $title, $content)
 function articles_edit($link, $id, $title, $content)
 {
     //Подготовка
-    $title = treim($title);
+    $title = trim($title);
     $content = trim($content);
     $id = (int)$id;
 
@@ -102,7 +102,7 @@ function articles_delete($link, $id)
     $query = sprintf("DELETE FROM articles WHERE id='%d'", $id);
     $result = mysqli_query($link, $query);
 
-    if(!result)
+    if(!$result)
         die(mysqli_error($link));
 
     return mysqli_affected_rows($link);

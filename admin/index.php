@@ -19,16 +19,19 @@ if ($action == "add") {
         header("Location: index.php");
     }
     include("../views/article_admin.php");
+
 } else if ($action == "edit") {
     if (!isset($_GET['id']))
         header("Location: index.php");
     $id = (int)$_GET['id'];
+
     if (!empty($_POST) && $id > 0) {
         articles_edit($link, $id, $_POST['title'], $_POST['content']);
         header("Location: index.php");
     }
     $article = articles_get($link, $id);
     include("../views/article_admin.php");
+
 } else if ($action == "delete") {
     $id = $_GET['id'];
     $article = articles_delete($link, $id);
