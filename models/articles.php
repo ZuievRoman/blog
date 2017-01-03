@@ -74,7 +74,7 @@ function articles_edit($link, $id, $title, $content)
         return false;
 
     //Запрос
-    $sql = "UPDATE articles SET title='%s', content='%s' WHERE id = '%s'";
+    $sql = "UPDATE articles SET title='%s', content='%s' WHERE id = '%d'";
 
     $query = sprintf($sql,  mysqli_real_escape_string($link, $title),
                             mysqli_escape_string($link, $content),
