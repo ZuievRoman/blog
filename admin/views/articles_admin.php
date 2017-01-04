@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Блог для задания</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/jquery.min.js"></script>
-</head>
-<body>
+<?php require_once ("header_admin.php"); ?>
 <div class="container">
     <h1>Блог для задания</h1>
     <div>
@@ -35,15 +27,4 @@
         <?endif;?>
     </div>
 </div>
-<footer>
-    <p>Блог для задания<br>Copyright&copy;2017</p></footer>
-<script type="text/javascript">
-    $('.delete-article').click(function (e) {
-        e.preventDefault();
-        if (confirm('Are you sure you want to delete article from database?')) {
-            window.location.href = $(this).attr('href');
-        }
-    });
-</script>
-</body>
-</html>
+<?php require_once ("footer_admin.php"); ?>

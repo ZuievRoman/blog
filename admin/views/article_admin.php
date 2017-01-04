@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Блог для задания</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+<?php require_once ("header_admin.php"); ?>
 <div class="container">
     <h1>Блог для задания</h1>
     <div>
@@ -32,7 +25,4 @@
         </form>
     </div>
 </div>
-<footer>
-    <p>Блог для задания<br>Copyright&copy;2017</p></footer>
-</body>
-</html>
+<?php require_once ("footer_admin.php"); ?>
