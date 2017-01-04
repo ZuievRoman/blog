@@ -1,6 +1,5 @@
 <?php require_once ("header.php"); ?>
 <main class="container">
-
     <div class="row">
         <h1>Блог для задания</h1>
         <a href="admin">Панель Администратора</a>
@@ -18,6 +17,5 @@
             <?php endforeach ?>
         </div>
     </div>
-    <button type="button" class="btn btn-primary">11</button>
 </main>
 <?php require_once ("footer.php"); ?>
