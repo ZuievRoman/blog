@@ -2,6 +2,9 @@
 <main class="container">
     <div class="row">
         <h1>Блог для задания</h1>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+            <i class="material-icons">add</i>
+        </button>
         <a href="admin">Панель Администратора</a>
         <div>
             <?php foreach ($articles as $article): ?>
