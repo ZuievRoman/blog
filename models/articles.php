@@ -1,9 +1,11 @@
 <?php
 
-function articles_all($link)
+function articles_all($link, $page=1)
 {
+    $limit = 2;
     //Запрос
-    $query = "SELECT * FROM articles ORDER BY id DESC";
+    #$query = sprintf("SELECT * FROM articles ORDER BY updated_at DESC limit %s, %s", ($page-1)*$limit, $limit);
+    $query = "SELECT * FROM articles ORDER BY updated_at DESC";
     $result = mysqli_query($link, $query);
 
     if (!$result)
@@ -30,12 +32,10 @@ function articles_get($link, $id_article)
     if (!$result)
         die(mysqli_error($link));
 
-    $article = mysqli_fetch_assoc($result);
-
-    return $article;
+    return mysqli_fetch_assoc($result);
 }
 
-function articles_new($link, $title, $content)
+function articles_new($link, $title, $content, $photo)
 {
     $date = date("Y-m-d H:i:s");
     //Подготовка
@@ -50,20 +50,56 @@ function articles_new($link, $title, $content)
     $t = "INSERT INTO articles (title, updated_at, content) VALUES('%s', '%s', '%s')";
 
     $query = sprintf($t, mysqli_real_escape_string($link, $title),
-        mysqli_real_escape_string($link, $date),
+        mysqli_escape_string($link, $date),
         mysqli_escape_string($link, $content));
 
 //    echo $query;
     $result = mysqli_query($link, $query);
 
-    if (!result)
+    if (!$result) {
         die(mysqli_error($link));
+    }else{
+        $id = $link->insert_id;
+        if(isset($photo) && isset($id)){
+            save_photo($link, $id, $photo);
+        }
+    }
 
     return true;
 }
 
-function articles_edit($link, $id, $title, $content)
+function save_photo($link, $id, $photo, $is_update_photo=false){
+    // Save file
+    $rootPath = dirname(__FILE__).'\\..\\';
+    $info = pathinfo($photo['name']);
+    $ext = $info['extension']; // get the extension of the file
+    $dir = $rootPath.'uploads\\articles\\'.strval($id);
+    if($is_update_photo and file_exists($dir)){
+        foreach(scandir($dir) as $file) {
+            if ('.' === $file || '..' === $file) continue;
+            else unlink("$dir/$file");
+        }
+    }
+    $is_folder = false;
+    if (!file_exists($dir)) {
+        if(mkdir($dir, 0777, true)) $is_folder = true;
+    }else{
+        $is_folder = true;
+    }
+
+    if($is_folder){
+        $name_photo =  date("YmdHis").".".$ext;
+        $target = $dir.'\\'.$name_photo;
+        if(move_uploaded_file($photo['tmp_name'], $target)){
+            $short_dir = 'uploads\\articles\\'.strval($id).'\\'.$name_photo;
+            mysqli_query($link, sprintf("UPDATE articles SET photo='%s' WHERE id = '%d'", mysqli_escape_string($link, $short_dir), $id));
+        }
+    }
+}
+
+function articles_edit($link, $id, $title, $content, $photo)
 {
+    $date = date("Y-m-d H:i:s");
     //Подготовка
     $title = trim($title);
     $content = trim($content);
@@ -74,16 +110,25 @@ function articles_edit($link, $id, $title, $content)
         return false;
 
     //Запрос
-    $sql = "UPDATE articles SET title='%s', content='%s' WHERE id = '%d'";
+    $sql = "UPDATE articles SET title='%s', updated_at='%s', content='%s' WHERE id = '%d'";
 
-    $query = sprintf($sql,  mysqli_real_escape_string($link, $title),
-                            mysqli_escape_string($link, $content),
-                             $id);
+    $query = sprintf(
+        $sql,
+        mysqli_real_escape_string($link, $title),
+        mysqli_escape_string($link, $date),
+        mysqli_escape_string($link, $content),
+        $id
+    );
 
     $result = mysqli_query($link, $query);
 
-    if(!$result)
+    if(!$result) {
         die(mysqli_error($link));
+    }else{
+        if(isset($photo)){
+            save_photo($link, $id, $photo, true);
+        }
+    }
 
     return mysqli_affected_rows($link);
 }
@@ -102,15 +147,27 @@ function articles_delete($link, $id)
     $query = sprintf("DELETE FROM articles WHERE id='%d'", $id);
     $result = mysqli_query($link, $query);
 
-    if(!$result)
+    if(!$result) {
         die(mysqli_error($link));
+    }else{
+        delete_article_photo_folder($id);
+    }
 
     return mysqli_affected_rows($link);
+}
+
+function delete_article_photo_folder($id){
+    $rootPath = dirname(__FILE__).'\\..\\';
+    $dir = $rootPath.'uploads\\articles\\'.strval($id);
+    if(file_exists($dir)){
+        foreach(scandir($dir) as $file) {
+            if ('.' === $file || '..' === $file) continue;
+            else unlink("$dir/$file");
+        }
+        rmdir($dir);
+    }
 }
 
 function articles_intro($text, $len = 500){
     return mb_substr($text, 0, $len);
 }
-
-?>
-

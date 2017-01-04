@@ -11,7 +11,11 @@
             <div>
                 <div class="article">
                     <h3><?=$article['title']?></h3>
-                    <em>Опубликовано: <?=$article['date']?></em>
+                    <? if(isset($article['photo'])): ?>
+                        <p><img src="<?=$article['photo']?>" alt="<?=$article['title']?>"/></p>
+                    <? endif; ?>
+                    <em>Создано: <?=$article['created_at']?></em>
+                    <em>Обновлено: <?=$article['updated_at']?></em>
                     <p><?=$article['content']?></p>    
                 </div>
                 </div>

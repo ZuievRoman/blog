@@ -4,9 +4,10 @@ require_once("../models/articles.php");
 
 $link = db_connect();
 
-//$article['title'] = '';
-//$article['date'] = '';
-//$article['content'] = '';
+$article['title'] = '';
+$article['date'] = '';
+$article['content'] = '';
+
 
 if (isset($_GET['action']))
     $action = $_GET['action'];
@@ -15,7 +16,7 @@ else
 
 if ($action == "add") {
     if (!empty($_POST)) {
-        articles_new($link, $_POST['title'], $_POST['content']);
+        articles_new($link, $_POST['title'], $_POST['content'], $_FILES['file'] );
         header("Location: index.php");
     }
     include("../views/article_admin.php");
@@ -26,7 +27,7 @@ if ($action == "add") {
     $id = (int)$_GET['id'];
 
     if (!empty($_POST) && $id > 0) {
-        articles_edit($link, $id, $_POST['title'], $_POST['content']);
+        articles_edit($link, $id, $_POST['title'], $_POST['content'], $_FILES['file'] );
         header("Location: index.php");
     }
     $article = articles_get($link, $id);
@@ -37,7 +38,6 @@ if ($action == "add") {
     $article = articles_delete($link, $id);
     header("Location: index.php");
 } else {
-    $articles = articles_all($link);
+    $articles = articles_all($link, $_GET['page']);
     include("../views/articles_admin.php");
 }
-?>
