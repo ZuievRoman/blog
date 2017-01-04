@@ -19,7 +19,7 @@ if ($action == "add") {
         articles_new($link, $_POST['title'], $_POST['content'], $_FILES['file'] );
         header("Location: index.php");
     }
-    include("../views/article_admin.php");
+    include("views/article_admin.php");
 
 } else if ($action == "edit") {
     if (!isset($_GET['id']))
@@ -31,7 +31,7 @@ if ($action == "add") {
         header("Location: index.php");
     }
     $article = articles_get($link, $id);
-    include("../views/article_admin.php");
+    include("views/article_admin.php");
 
 } else if ($action == "delete") {
     $id = $_GET['id'];
@@ -39,5 +39,5 @@ if ($action == "add") {
     header("Location: index.php");
 } else {
     $articles = articles_all($link, $_GET['page']);
-    include("../views/articles_admin.php");
+    include("views/articles_admin.php");
 }
