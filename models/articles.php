@@ -1,6 +1,6 @@
 <?php
 
-function articles_all($link, $page=1)
+function articles_all($link, $page = 1)
 {
     $limit = 2;
     //Запрос
@@ -43,7 +43,7 @@ function articles_new($link, $title, $content, $photo)
     $content = trim($content);
 
     //Проверка
-    if ($title =='')
+    if ($title == '')
         return false;
 
     //Запрос
@@ -58,9 +58,9 @@ function articles_new($link, $title, $content, $photo)
 
     if (!$result) {
         die(mysqli_error($link));
-    }else{
+    } else {
         $id = $link->insert_id;
-        if(isset($photo) && isset($id)){
+        if (isset($photo) && isset($id)) {
             save_photo($link, $id, $photo);
         }
     }
@@ -68,30 +68,31 @@ function articles_new($link, $title, $content, $photo)
     return true;
 }
 
-function save_photo($link, $id, $photo, $is_update_photo=false){
+function save_photo($link, $id, $photo, $is_update_photo = false)
+{
     // Save file
-    $rootPath = dirname(__FILE__).'\\..\\';
+    $rootPath = dirname(__FILE__) . '\\..\\';
     $info = pathinfo($photo['name']);
     $ext = $info['extension']; // get the extension of the file
-    $dir = $rootPath.'uploads\\articles\\'.strval($id);
-    if($is_update_photo and file_exists($dir)){
-        foreach(scandir($dir) as $file) {
+    $dir = $rootPath . 'uploads\\articles\\' . strval($id);
+    if ($is_update_photo and file_exists($dir)) {
+        foreach (scandir($dir) as $file) {
             if ('.' === $file || '..' === $file) continue;
             else unlink("$dir/$file");
         }
     }
     $is_folder = false;
     if (!file_exists($dir)) {
-        if(mkdir($dir, 0777, true)) $is_folder = true;
-    }else{
+        if (mkdir($dir, 0777, true)) $is_folder = true;
+    } else {
         $is_folder = true;
     }
 
-    if($is_folder){
-        $name_photo =  date("YmdHis").".".$ext;
-        $target = $dir.'\\'.$name_photo;
-        if(move_uploaded_file($photo['tmp_name'], $target)){
-            $short_dir = 'uploads\\articles\\'.strval($id).'\\'.$name_photo;
+    if ($is_folder) {
+        $name_photo = date("YmdHis") . "." . $ext;
+        $target = $dir . '\\' . $name_photo;
+        if (move_uploaded_file($photo['tmp_name'], $target)) {
+            $short_dir = 'uploads\\articles\\' . strval($id) . '\\' . $name_photo;
             mysqli_query($link, sprintf("UPDATE articles SET photo='%s' WHERE id = '%d'", mysqli_escape_string($link, $short_dir), $id));
         }
     }
@@ -122,18 +123,16 @@ function articles_edit($link, $id, $title, $content, $photo)
 
     $result = mysqli_query($link, $query);
 
-    if(!$result) {
+    if (!$result) {
         die(mysqli_error($link));
-    }else{
-        if(isset($photo)){
+    } else {
+        if (isset($photo)) {
             save_photo($link, $id, $photo, true);
         }
     }
 
     return mysqli_affected_rows($link);
 }
-
-
 
 
 function articles_delete($link, $id)
@@ -147,20 +146,21 @@ function articles_delete($link, $id)
     $query = sprintf("DELETE FROM articles WHERE id='%d'", $id);
     $result = mysqli_query($link, $query);
 
-    if(!$result) {
+    if (!$result) {
         die(mysqli_error($link));
-    }else{
+    } else {
         delete_article_photo_folder($id);
     }
 
     return mysqli_affected_rows($link);
 }
 
-function delete_article_photo_folder($id){
-    $rootPath = dirname(__FILE__).'\\..\\';
-    $dir = $rootPath.'uploads\\articles\\'.strval($id);
-    if(file_exists($dir)){
-        foreach(scandir($dir) as $file) {
+function delete_article_photo_folder($id)
+{
+    $rootPath = dirname(__FILE__) . '\\..\\';
+    $dir = $rootPath . 'uploads\\articles\\' . strval($id);
+    if (file_exists($dir)) {
+        foreach (scandir($dir) as $file) {
             if ('.' === $file || '..' === $file) continue;
             else unlink("$dir/$file");
         }
@@ -168,6 +168,7 @@ function delete_article_photo_folder($id){
     }
 }
 
-function articles_intro($text, $len = 500){
+function articles_intro($text, $len = 500)
+{
     return mb_substr($text, 0, $len);
 }
