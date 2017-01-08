@@ -1,5 +1,6 @@
 <?php
-setcookie("count", "$count", time() + 3600 * 24);
+setcookie("count", "$count", time() + 3600 * 24 - (3600 * getdate()['hours'] + 60 * getdate()['minutes']
+        + getdate()['seconds']));
 $count = $_COOKIE['count'];
 if (!isset($count)) {
     $count = 0;
