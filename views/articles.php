@@ -1,5 +1,6 @@
-<?php require_once ("header.php"); ?>
-<main class="container">
+
+<?php require_once("header.php"); ?>
+    <main class="container">
     <div class="row">
         <h1>Блог для задания</h1>
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
@@ -20,5 +21,5 @@
             <?php endforeach ?>
         </div>
     </div>
-</main>
-<?php require_once ("footer.php"); ?>
+    </main>
+<?php require_once("footer.php"); ?>

@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<body class="container-fluid">
 <header class="row">
-    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 text-center">
+    <div class="text-center">
         <h1>memories1</h1>
     </div>
 </header>

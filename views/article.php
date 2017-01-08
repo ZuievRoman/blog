@@ -1,16 +1,25 @@
-<?php require_once ("header.php"); ?>
-        <div class="container">
-            <h1>Блог для задания</h1>
-            <div>
-                <div class="article">
-                    <h3><?=$article['title']?></h3>
-                    <? if(isset($article['photo'])): ?>
-                        <p><img src="<?=$article['photo']?>" alt="<?=$article['title']?>"/></p>
-                    <? endif; ?>
-                    <em>Создано: <?=$article['created_at']?></em>
-                    <em>Обновлено: <?=$article['updated_at']?></em>
-                    <p><?=$article['content']?></p>    
-                </div>
-                </div>
+<?php
+setcookie("count", "$count", time() + 3600 * 24);
+$count = $_COOKIE['count'];
+if (!isset($count)) {
+    $count = 0;
+}
+$count++;
+?>
+<?php require_once("header.php"); ?>
+    <div class="container">
+        <h1>Блог для задания</h1>
+        <div>
+            <div class="article">
+                <h3><?= $article['title'] ?></h3>
+                <? if (isset($article['photo'])): ?>
+                    <p><img src="<?= $article['photo'] ?>" alt="<?= $article['title'] ?>"/></p>
+                <? endif; ?>
+                <em>Создано: <?= $article['created_at'] ?></em>
+                <em>Обновлено: <?= $article['updated_at'] ?></em>
+                <p><?= $article['content'] ?></p>
+                <p>Количество просмотров <?= $count; ?></p>
             </div>
-<?php require_once ("footer.php"); ?>
+        </div>
+    </div>
+<?php require_once("footer.php"); ?>

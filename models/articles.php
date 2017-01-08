@@ -172,3 +172,31 @@ function articles_intro($text, $len = 500)
 {
     return mb_substr($text, 0, $len);
 }
+
+///Функция для счетчика просмотров
+//function articles_views($link, $title){
+//
+//
+//    $ip =  $_SERVER["REMOTE_ADDR"]; // узнали IP пользователя
+//    $query = mysql_query("SELECT `ip` from table where `ip` = '$ip'");
+//    mysql_fetch_array($query);
+//    if(isset($query['ip'])){
+//        exit;
+//    }else{
+//        // апдейтим кол-во уник просмотров
+//    }
+//
+//
+//
+//    $v = "SELECT views FROM articles WHERE articles.title = '%s'";
+//
+//    $query = sprintf($v,
+//        mysqli_escape_string($link, $title));
+//
+//    $result = mysqli_query($link, $query);
+//    $row = mysqli_fetch_assoc($link,$result);
+//
+//    $row['views']+1;
+//
+//    mysqli_query($link, sprintf("UPDATE articles SET views='views' WHERE articles.title = '$title'"));
+//}
