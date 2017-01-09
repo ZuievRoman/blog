@@ -1,13 +1,13 @@
 <?php
-setcookie("count", "$count", time() + 3600 * 24 - (3600 * getdate()['hours'] + 60 * getdate()['minutes']
-        + getdate()['seconds']));
-$count = $_COOKIE['count'];
-if (!isset($count)) {
-    $count = 0;
-}
-$count++;
-?>
-<?php require_once("header.php"); ?>
+//setcookie("count", "$count", time() + 3600 * 24 - (3600 * getdate()['hours'] + 60 * getdate()['minutes']
+//        + getdate()['seconds']));
+//$count = $_COOKIE['count'];
+//if (!isset($count)) {
+//    $count = 0;
+//}
+//$count++;
+
+require_once("header.php"); ?>
     <div class="container">
         <h1>Блог для задания</h1>
         <div>

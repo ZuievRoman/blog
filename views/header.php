@@ -8,7 +8,22 @@
 </head>
 <body class="container-fluid">
 <header class="row">
-    <div class="text-center">
-        <h1>memories1</h1>
-    </div>
+    <section class="container header">
+        <div class="row header_box">
+            <div class="col-lg-9 header_logo vcenter">
+                <img src="img/main_logo.png" alt="main_logo">
+            </div>
+            <div class="col-lg-2 text-right header_account vcenter">
+                <div class="header_account_login text-left">
+                    <i class="material-icons">&#xE851;</i><br>
+                    <span class="">administrator</span>
+                </div>
+                <div class="vcenter vtop">
+                    <a href="admin"><i class="fa fa-sign-in" aria-hidden="true"></i>sign in</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
 </header>
+
