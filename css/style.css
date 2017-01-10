@@ -14,8 +14,8 @@ body {
     vertical-align: top;
     padding: 31px 0; }
   body header .header_logo img {
-    width: 89px;
-    height: 89px; }
+    width: 75px;
+    height: 75px; }
   body header .header_account, body header .header_logo, body header .header_account_login {
     display: inline-block; }
     body header .header_account .header_account_login, body header .header_logo .header_account_login, body header .header_account_login .header_account_login {

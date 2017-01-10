@@ -21,10 +21,8 @@ body {
   header {
     .header_logo {
       img {
-
-        $size_logo: 89px;
-        width: $size_logo;
-        height: $size_logo;
+        width: 75px;
+        height: 75px;
       }
     }
     .header_account, .header_logo, .header_account_login {

@@ -8,6 +8,7 @@
 //$count++;
 
 require_once("header.php"); ?>
+<?php update_counter($article['id'])?>
     <div class="container">
         <h1>Блог для задания</h1>
         <div>
@@ -19,7 +20,7 @@ require_once("header.php"); ?>
                 <em>Создано: <?= $article['created_at'] ?></em>
                 <em>Обновлено: <?= $article['updated_at'] ?></em>
                 <p><?= $article['content'] ?></p>
-                <p>Количество просмотров <?= $count; ?></p>
+                <p>Количество просмотров <?= get_counter($article['id']); ?></p>
             </div>
         </div>
     </div>

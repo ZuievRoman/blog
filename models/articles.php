@@ -71,10 +71,12 @@ function articles_new($link, $title, $content, $photo)
 function save_photo($link, $id, $photo, $is_update_photo = false)
 {
     // Save file
-    $rootPath = dirname(__FILE__) . '\\..\\';
+//    $rootPath = dirname(__FILE__) . '\\..\\'; // слеш / DIRECTORY_SEPARATOR.’..’.DIRECTORY_SEPARATOR
+    $rootPath = dirname(__FILE__) .DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR; // слеш / DIRECTORY_SEPARATOR.’..’.DIRECTORY_SEPARATOR
     $info = pathinfo($photo['name']);
     $ext = $info['extension']; // get the extension of the file
-    $dir = $rootPath . 'uploads\\articles\\' . strval($id);
+    $dir = $rootPath . 'uploads.DIRECTORY_SEPARATOR.articles.DIRECTORY_SEPARATOR' . strval($id);
+//    $dir = $rootPath . 'uploads\\articles\\' . strval($id);
     if ($is_update_photo and file_exists($dir)) {
         foreach (scandir($dir) as $file) {
             if ('.' === $file || '..' === $file) continue;
@@ -90,9 +92,11 @@ function save_photo($link, $id, $photo, $is_update_photo = false)
 
     if ($is_folder) {
         $name_photo = date("YmdHis") . "." . $ext;
-        $target = $dir . '\\' . $name_photo;
+//        $target = $dir . '\\' . $name_photo;
+        $target = $dir .DIRECTORY_SEPARATOR. $name_photo;
         if (move_uploaded_file($photo['tmp_name'], $target)) {
-            $short_dir = 'uploads\\articles\\' . strval($id) . '\\' . $name_photo;
+            $short_dir = 'uploads.DIRECTORY_SEPARATOR.articles.DIRECTORY_SEPARATOR' . strval($id) . DIRECTORY_SEPARATOR.$name_photo;
+//            $short_dir = 'uploads\\articles\\' . strval($id) . '\\' . $name_photo;
             mysqli_query($link, sprintf("UPDATE articles SET photo='%s' WHERE id = '%d'", mysqli_escape_string($link, $short_dir), $id));
         }
     }

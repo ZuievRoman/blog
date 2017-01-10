@@ -1,6 +1,15 @@
 <?php require_once("header.php"); ?>
     <main>
         <section class="main_top">
+<!--            <div class="owl-carousel owl-theme">-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--                <div> Your Content </div>-->
+<!--            </div>-->
             <div class="col-lg-6 main_photo"></div>
             <div class="col-lg-6 main_photo"></div>
             <div class="col-lg-6 main_photo"></div>
@@ -16,6 +25,7 @@
                         <em>data</em>
                     </div>
                     <br>
+
                     <div class="main_content_article_text">
                         <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quos, tempore. Beatae dolore eaque ex
             fugit illum impedit molestias mollitia odio vel velit. Autem cum deleniti deserunt placeat,
