@@ -1,15 +1,15 @@
 <?php require_once("header.php"); ?>
     <main>
         <section class="main_top">
-<!--            <div class="owl-carousel owl-theme">-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--                <div> Your Content </div>-->
-<!--            </div>-->
+            <div class="owl-carousel owl-theme">
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+            </div>
             <div class="col-lg-6 main_photo"></div>
             <div class="col-lg-6 main_photo"></div>
             <div class="col-lg-6 main_photo"></div>
@@ -57,6 +57,7 @@
                             <em>Создано: <?= $article['created_at'] ?></em>
                             <em>Обновлено: <?= $article['updated_at'] ?></em>
                             <p><?= articles_intro($article['content']) ?></p>
+                            <p>Количество просмотров <?= get_counter($article['id']); ?></p>
                             <a href="article.php?id=<?= $article['id'] ?>">read more</a>
                         </div>
                     <?php endforeach ?>
